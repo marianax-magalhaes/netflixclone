@@ -42,7 +42,7 @@ export default ({item})=>{
                         </div>
 
                         <div className="featured--buttons">
-                            <a href={`/watch/${item.id}`} className="featured--watch">► Assitir</a>
+                            <a href={`/watch/${item.id}`} className="featured--watch">► Assistir</a>
                             <a href={`/list/add/${item.id}`} className="featured--addToList">+ Minha Lista</a>
                         </div>
                         
