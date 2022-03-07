@@ -10,6 +10,9 @@
     overflow-x: hidden;
 
 }
+.movieRow--list{
+    width: 99999999px;
+}
 .movieRow--item{
-    display:inline-block;
+    display: inline-block;
 }
