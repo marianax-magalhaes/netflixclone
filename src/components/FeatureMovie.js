@@ -19,33 +19,36 @@ export default ({item})=>{
                 <div className="featured--horizontal">
                     <div className="featured--name">
                     {item.original_name}
-                    </div>
+                    </div >
 
                     <div className="featured--info">
-                    {item.vote_average} pontos
+
+                        <div className="featured--points">
+                        {item.vote_average} pontos
+                        </div>
+
+                        <div className="featured--year">
+                        {firstDate.getFullYear()}
+                        </div>
+
+                        <div className="featured--season">
+                        {item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's': ''}
+                        </div>
+
                     </div>
 
-                    <div className="featured--year">
-                    {firstDate.getFullYear()}
-                    </div>
+                        <div className="featured--description">
+                        {item.overview} pontos
+                        </div>
 
-                    <div className="featured--info">
-                    {item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's': ''}
-                    </div>
-
-                    <div className="featured--description">
-                    {item.overview} pontos
-                    </div>
-
-                    <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`}>► Assitir</a>
-                        <a href={`/list/add/${item.id}`}>+ Minha LIsta</a>
-                    </div>
-                    
-                    <div className="featured--genres">
-                    <strong>Gêneros:</strong> {genres.join(", ")}
-                    </div>
-
+                        <div className="featured--buttons">
+                            <a href={`/watch/${item.id}`} className="featured--watch">► Assitir</a>
+                            <a href={`/list/add/${item.id}`} className="featured--addToList">+ Minha Lista</a>
+                        </div>
+                        
+                        <div className="featured--genres">
+                        <strong>Gêneros:</strong> {genres.join(", ")}
+                        </div>
                 </div>
             </div>
         </section>
