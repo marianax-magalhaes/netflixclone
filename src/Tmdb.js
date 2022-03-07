@@ -1,3 +1,5 @@
+import { getMouseEventOptions } from "@testing-library/user-event/dist/utils";
+
 const API_KEY = 'adbfc95fff14244058a25eed8cd7f12a';
 const API_BASE = 'https://api.themoviedb.org/3';
 
@@ -51,5 +53,22 @@ export default {
                 items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             }
         ];
+    },
+
+    getMovieInfo: async(movieId, type)=>{
+        let info={};
+
+        if(movieId){
+            switch(type){
+                case 'movie':
+                    info= await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+                break;
+                case 'tv':
+                    info= await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+                break;
+            }
+        }
+
+        return info;
     }
 }
