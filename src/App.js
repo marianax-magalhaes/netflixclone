@@ -61,6 +61,12 @@ export default ()=>{
                 <MovieRow key={key} title={item.title} items={item.items}/>
             ))}
             </section>
+
+            <footer>
+                Desenvolvido por Mariana X Magalhaes.<br/>
+                Direitos de imagem para Netflix, HBO, Amaxon Prime Video.<br/>
+                API do site Themoviedb.org.
+            </footer>
         </div>
     );
 }
